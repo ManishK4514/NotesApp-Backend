@@ -21,7 +21,7 @@ userRouter.post("/register", async(req, res) => {
             // Generate a token
             const token = jwt.sign({ userId: user._id }, 'Manish');
 
-            // Send the token in the response
+            // Send the token in the response with a message User Created
             res.status(201).send({ message: "User Created...", token });
         }
         catch(error) {
